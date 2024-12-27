@@ -9,10 +9,14 @@
 <body>
     <header class="header">
         <div class="header-container container">
-                <a href="./glavnaia.html" class="logo">
-                    <img class="logo-img" src="./images/logo.png" alt="logo">
-                    <h1 class="header-head">Питайся Правильно!</h1>
-                </a>
+            <a href="./glavnaia.html" class="logo">
+                <img class="logo-img" src="./images/logo.png" alt="logo">
+            </a>
+
+            <div class="user-info">
+                <span id="userName">Добро пожаловать, <span id="user-name-placeholder">Гость</span></span>
+                <button id="logoutButton" class="logout-button">Выход</button>
+            </div>
                 
             <div class="navigation">
                 <ul class="navigation-list">
@@ -93,5 +97,7 @@
         </div>   
         <div class="reservaion">© 2024 All Rights Reserved </div>
     </footer>
+
+    <script src="./js/header.js"></script>
 </body>
 </html>

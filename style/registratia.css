@@ -78,3 +78,11 @@ body{
     color: red;
     text-align: left;
 }
+
+input:invalid, select:invalid {
+    border: 2px solid red;
+}
+
+input:valid, select:valid {
+    border: 2px solid green; /* Можно добавить зеленую обводку для корректных полей */
+}

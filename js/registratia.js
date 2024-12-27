@@ -6,56 +6,71 @@ const birthdayError = document.getElementById('birthdayError')
 registratiaForm.addEventListener('submit', function (event) {
 	event.preventDefault()
 
-	const user = document.getElementById('name').value.trim()
-	const gender = document.getElementById('gender').value
-	const birthday = document.getElementById('birthday').value
+	const nameInput = document.getElementById('name')
+	const genderInput = document.getElementById('gender')
+	const birthdayInput = document.getElementById('birthday')
 
 	let hasError = false
 
-	if (!user || user.length < 4 || user.length > 10) {
-		nameError.textContent = 'От 4 до 10 символов.'
+	if (!nameInput.validity.valid) {
+		if (nameInput.validity.valueMissing) {
+			nameError.textContent = 'Логин обязателен.'
+		} else if (nameInput.validity.tooShort) {
+			nameError.textContent = 'Логин должен быть не менее 4 символов.'
+		} else if (nameInput.validity.tooLong) {
+			nameError.textContent = 'Логин не должен превышать 10 символов.'
+		}
 		hasError = true
+		nameInput.classList.add('invalid')
 	} else {
 		nameError.textContent = ''
+		nameInput.classList.remove('invalid')
 	}
 
-	if (!gender) {
+	if (!genderInput.validity.valid) {
 		genderError.textContent = 'Выберите пол.'
 		hasError = true
+		genderInput.classList.add('invalid')
 	} else {
 		genderError.textContent = ''
+		genderInput.classList.remove('invalid')
 	}
 
-	if (!birthday) {
+	if (!birthdayInput.validity.valid) {
 		birthdayError.textContent = 'Укажите дату.'
 		hasError = true
+		birthdayInput.classList.add('invalid')
 	} else {
 		birthdayError.textContent = ''
+		birthdayInput.classList.remove('invalid')
 	}
 
 	if (hasError) return
 
-	localStorage.setItem('name', user)
-	localStorage.setItem('gender', gender)
-	localStorage.setItem('birthday', birthday)
+	localStorage.setItem('name', nameInput.value)
+	localStorage.setItem('gender', genderInput.value)
+	localStorage.setItem('birthday', birthdayInput.value)
 
-	window.location.href = './glavnaia.html'
+	window.location.href = '../glavnaia.html'
 })
 
-document.getElementById('name').addEventListener('input', function () {
-    if (this.value.trim().length >= 4 && this.value.trim().length <= 10) {
-        nameError.textContent = ''
-    }
+nameInput.addEventListener('input', function () {
+	if (this.validity.valid) {
+		nameError.textContent = ''
+		this.classList.remove('invalid')
+	}
 })
 
-document.getElementById('gender').addEventListener('change', function () {
-    if (this.value) {
-        genderError.textContent = ''
-    }
+genderInput.addEventListener('change', function () {
+	if (this.validity.valid) {
+		genderError.textContent = ''
+		this.classList.remove('invalid')
+	}
 })
 
-document.getElementById('birthday').addEventListener('input', function () {
-    if (this.value) {
-        birthdayError.textContent = ''
-    }
+birthdayInput.addEventListener('input', function () {
+	if (this.validity.valid) {
+		birthdayError.textContent = ''
+		this.classList.remove('invalid')
+	}
 })
