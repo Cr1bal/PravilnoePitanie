@@ -51,7 +51,7 @@ registratiaForm.addEventListener('submit', function (event) {
 	localStorage.setItem('gender', genderInput.value)
 	localStorage.setItem('birthday', birthdayInput.value)
 
-	window.location.href = '../glavnaia.html'
+	window.location.href = './glavnaia.html'
 })
 
 nameInput.addEventListener('input', function () {
