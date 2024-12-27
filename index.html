@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добро пожаловать!</title>
+  <link rel="stylesheet" href="./style/registratia.css">
+</head>
+<body>
+  <div class="registratia">
+    <section class="registratia-form">
+      <h2 class="registratia-head">Авторизация</h2>
+
+      <form id="registratiaForm" novalidate required>
+        <div class="name-input">
+          <label for="name">Логин:</label>
+          <input class="input" type="text" id="name" name="name" minlength="4" maxlength="10" required>
+          <span id="nameError" class="error"></span>
+        </div>
+
+        <div class="gender-input">
+          <label for="gender">Пол:</label>
+          <select class="input" id="gender" name="gender" required>
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+          </select>
+          <span id="genderError" class="error"></span>
+        </div>
+        
+        <div class="birthday-input">
+          <label for="birthday">Дата рождения:</label>
+          <input class="input" type="date" id="birthday" name="birthday" required>
+          <span id="birthdayError" class="error"></span>
+        </div>
+  
+        <button class="button" type="submit" id="logIn">Войти</button>
+      </form>
+    </section>
+  </div>
+  <script src="js/registratia.js"></script>
+</body>
+</html>

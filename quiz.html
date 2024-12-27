@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="./style/quiz.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container container">
+            <a href="./glavnaia.html" class="logo">
+                <img class="logo-img" src="./images/logo.png" alt="logo">
+                <h1 class="header-head">Питайся Правильно!</h1>
+            </a>
+
+            <div class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a href="" class="navigation-link">Главная</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="./prof.html" class="navigation-link">Профиль</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="./poisk.html" class="navigation-link">Продукты</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="./slaider.html" class="navigation-link">Рацион</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="./quiz.html" class="navigation-link">Соц Опрос</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social">
+                <a href="https://vk.com/faq18350" class="vk">
+                    <img class="vk-img" src="./images/vk.png" alt="soc">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main-container container">
+            <div class="quiz-container">
+                <h1 class="quiz-head" >Тест по правильному питанию</h1>
+                <form id="quizForm">
+                    <div class="question">
+                        <p class="question-head">1. Сколько литров воды рекомендуется пить в день?</p>
+                        <div class="answers">
+                            <label><input type="radio" name="q1" value="1"> 1-1.5 литра</label>
+                            <label><input type="radio" name="q1" value="2"> 2-2.5 литра</label>
+                            <label><input type="radio" name="q1" value="3"> 3-4 литра</label>
+                        </div>
+                    </div>
+            
+                    <div class="question">
+                        <p class="question-head">2. Какой продукт содержит больше всего витамина C?</p>
+                        <div class="answers">
+                            <label><input type="radio" name="q2" value="1"> Яблоко</label>
+                            <label><input type="radio" name="q2" value="2"> Апельсин</label>
+                            <label><input type="radio" name="q2" value="3"> Болгарский перец</label>
+                        </div>
+                    </div>
+            
+                    <div class="question">
+                        <p class="question-head">3. Что такое белки?</p>
+                        <div class="answers">
+                            <label><input type="radio" name="q3" value="1"> Источник энергии</label>
+                            <label><input type="radio" name="q3" value="2"> Основной строительный материал для клеток</label>
+                            <label><input type="radio" name="q3" value="3"> Запасной источник энергии</label>
+                        </div>
+                    </div>
+            
+                    <div class="question">
+                        <p class="question-head">4. Какой продукт содержит "медленные углеводы"?</p>
+                        <div class="answers">
+                            <label><input type="radio" name="q4" value="1"> Конфеты</label>
+                            <label><input type="radio" name="q4" value="2"> Овсянка</label>
+                            <label><input type="radio" name="q4" value="3"> Газировка</label>
+                        </div>
+                    </div>
+            
+                    <div class="question">
+                        <p class="question-head">5. Какую долю рациона должны составлять овощи и фрукты?</p>
+                        <div class="answers">
+                            <label><input type="radio" name="q5" value="1"> Менее 25%</label>
+                            <label><input type="radio" name="q5" value="2"> 25-50%</label>
+                            <label><input type="radio" name="q5" value="3"> Более 50%</label>
+                        </div>
+                    </div>
+            
+                    <button type="button" class="button" id="submitQuiz">Отправить</button>
+                    <button type="button" class="button" id="restartQuiz">Рестарт</button>
+                </form>
+            
+                <div class="result" id="result"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="infa">
+            <a href="tel:+79999999999" class="contacts">Контакты: +7(999)-999-99-99</a>
+            <a href="mailto:sobaka@mail.ru" class="mail">Mail: sobaka@mail.ru</a>
+        </div>
+        <div class="reservaion">© 2024 All Rights Reserved </div>
+    </footer>
+
+    <script src="./js/quiz.js"></script>
+</body>
+
+</html>
